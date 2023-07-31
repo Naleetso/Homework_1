@@ -6,12 +6,24 @@
 Console.Write("Enter a 3-digit number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number < 100 || number > 999)
+int second = Second_digit(number);
+
+int Second_digit(int num) 
+{
+    if (num < 100 || num > 999)
+    {
+        return 0;
+    }
+    else 
+    {
+        return num % 100 / 10;
+    }
+}
+if (second == 0) 
 {
     Console.WriteLine("Are you stupid? It is said, three-digit");
 }
 else 
 {
-    int second = number % 100 / 10;
     Console.WriteLine($"The second digit is {second}");
 }
