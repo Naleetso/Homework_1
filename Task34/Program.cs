@@ -8,12 +8,6 @@ int[] array = new int[size];
 RandomArray(array);
 Console.WriteLine("In this array: ");
 PrintArray(array);
-
-for (int x = 0; x < array.Length; x++)
-{
-    if (array[x] % 2 == 0)
-        count++;
-}
 Console.WriteLine($"There are {count} even numbers");
 
 void RandomArray(int[] array)
@@ -29,6 +23,10 @@ void PrintArray(int[] array)
     Console.Write("[ ");
     for (int i = 0; i < array.Length; i++)
     {
+        if (array[x] % 2 == 0)
+        {
+            count++;
+        }
         Console.Write($"{array[i]} ");
     }
     Console.Write("]");
